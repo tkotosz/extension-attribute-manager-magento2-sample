@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Tkotosz\ExtensionAttributeManager\Container\ProductExtensionAttribute\ManagerContainer">
+        <arguments>
+            <argument name="managers" xsi:type="array">
+                <item name="custom_field_first_manager" xsi:type="object">Tkotosz\ExtensionAttributeTest\ExtensionAttribute\CustomFieldFirstManager</item>
+                <item name="custom_field_second_manager" xsi:type="object">Tkotosz\ExtensionAttributeTest\ExtensionAttribute\CustomFieldSecondManager</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Tkotosz\ExtensionAttributeManager\Container\ProductExtensionAttribute\AdminProductForm\FieldListProviderContainer">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="custom_field_first_field_list_provider" xsi:type="object">Tkotosz\ExtensionAttributeTest\ExtensionAttribute\AdminProductForm\CustomFieldFirstFieldListProvider</item>
+                <item name="custom_field_second_field_list_provider" xsi:type="object">Tkotosz\ExtensionAttributeTest\ExtensionAttribute\AdminProductForm\CustomFieldSecondFieldListProvider</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Tkotosz\ExtensionAttributeManager\Container\ProductExtensionAttribute\AdminProductForm\FieldSetProviderContainer">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="custom_field_second_field_set_provider" xsi:type="object">Tkotosz\ExtensionAttributeTest\ExtensionAttribute\AdminProductForm\CustomFieldSecondFieldSetProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
